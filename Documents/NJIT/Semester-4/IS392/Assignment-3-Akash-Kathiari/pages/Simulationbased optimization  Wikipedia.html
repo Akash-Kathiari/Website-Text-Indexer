@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Simulation-based optimization - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Simulation-based_optimization","wgTitle":"Simulation-based optimization","wgCurRevisionId":883533982,"wgRevisionId":883533982,"wgArticleId":49648894,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: Extra text: authors list","Mathematical optimization","Simulation"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Simulation-based_optimization","wgRelevantArticleId":49648894,"wgRequestId":"XHyOVgpAADwAADvAXU4AAAAI","wgCSPNonce":false,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikiEditorEnabledModules":[],"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsReferencePreviews":false,"wgPopupsShouldSendModuleToUser":true,"wgPopupsConflictsWithNavPopupGadget":false,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en","usePageImages":true,"usePageDescriptions":true},"wgMFIsPageContentModelEditable":true,"wgMFEnableFontChanger":true,"wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgWMESchemaEditAttemptStepOversample":false,"wgPoweredByHHVM":true,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgWikibaseItemId":"Q25304881","wgScoreNoteLanguages":{"arabic":"العربية","catalan":"català","deutsch":"Deutsch","english":"English","espanol":"español","italiano":"italiano","nederlands":"Nederlands","norsk":"norsk","portugues":"português","suomi":"suomi","svenska":"svenska","vlaams":"West-Vlams"},"wgScoreDefaultNoteLanguage":"nederlands","wgCentralAuthMobileDomain":false,"wgCodeMirrorEnabled":true,"wgVisualEditorToolbarScrollOffset":0,"wgVisualEditorUnsupportedEditParams":["undo","undoafter","veswitched"],"wgEditSubmitButtonLabelPublish":true,"oresWikiId":"enwiki","oresBaseUrl":"http://ores.discovery.wmnet:8081/","oresApiVersion":3});mw.loader.state({"ext.gadget.charinsert-styles":"ready","ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.toc.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","ext.3d.styles":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.tokens@0tffind",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});RLPAGEMODULES=["ext.cite.ux-enhancements","ext.math.scripts","site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"];mw.loader.load(RLPAGEMODULES);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.3d.styles%7Cext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cmediawiki.toc.styles%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.charinsert-styles&amp;only=styles&amp;skin=vector"/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.33.0-wmf.19"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/3/3b/Slide1_1.jpg"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Simulation-based_optimization"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Simulation-based_optimization&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Simulation-based_optimization&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Simulation-based_optimization"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Simulation-based_optimization rootpage-Simulation-based_optimization skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div><div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en">Simulation-based optimization</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>				<div id="contentSub"></div>
+				<div id="jump-to-nav"></div>				<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+				<a class="mw-jump-link" href="#p-search">Jump to search</a>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p><b>Simulation-based optimization</b> integrates <a href="/wiki/Optimization_(mathematics)" class="mw-redirect" title="Optimization (mathematics)">optimization</a> techniques into <a href="/wiki/Computer_simulation" title="Computer simulation">simulation</a> analysis. Because of the complexity of the simulation, the <a href="/wiki/Objective_function" class="mw-redirect" title="Objective function">objective function</a> may become difficult and expensive to evaluate.
+</p><p>Once a system is mathematically modeled, computer-based simulations provide information about its behavior. Parametric simulation methods can be used to improve the performance of a system. In this method, the input of each variable is varied with other parameters remaining constant and the effect on the design objective is observed. This is a time-consuming method and improves the performance partially. To obtain the optimal solution with minimum computation and time, the problem is solved iteratively where in each iteration the solution moves closer to the optimum solution. Such methods are known as ‘numerical optimization’ or ‘simulation-based optimization’.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>
+</p><p>In simulation experiment, the goal is to evaluate the effect of different values of input variables on a system. However, the interest is sometimes in finding the optimal value for input variables in terms of the system outcomes. One way could be running simulation experiments for all possible input variables. However, this approach is not always practical due to several possible situations and it just makes it intractable to run experiments for each scenario. For example, there might be too many possible values for input variables, or the simulation model might be too complicated and expensive to run for suboptimal input variable values. In these cases, the goal is to find optimal values for the input variables rather than trying all possible values. This process is called simulation optimization.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p><p>Specific simulation–based optimization methods can be chosen according to figure 1 based on the decision variable types.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Slide1_1.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Slide1_1.jpg/220px-Slide1_1.jpg" decoding="async" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Slide1_1.jpg/330px-Slide1_1.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Slide1_1.jpg/440px-Slide1_1.jpg 2x" data-file-width="960" data-file-height="720" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Slide1_1.jpg" class="internal" title="Enlarge"></a></div>Fig.1 Classification of simulation based optimization according to variable types</div></div></div>
+<p><a href="/wiki/Optimization_(computer_science)" class="mw-redirect" title="Optimization (computer science)">Optimization</a> exists in two main branches of operational research:
+</p><p><i>Optimization <a href="/wiki/Parametric_programming" title="Parametric programming">parametric</a> (static)</i> – The objective is to find the values of the parameters, which are “static” for all states, with the goal of maximizing or minimizing a function. In this case, one can use <a href="/wiki/Mathematical_programming" class="mw-redirect" title="Mathematical programming">mathematical programming</a>, such as <a href="/wiki/Linear_programming" title="Linear programming">linear programming</a>. In this scenario, simulation helps when the parameters contain noise or the evaluation of the problem would demand excessive computer time, due to its complexity.<sup id="cite_ref-:0_4-0" class="reference"><a href="#cite_note-:0-4">&#91;4&#93;</a></sup>
+</p><p><i>Optimization <a href="/wiki/Optimal_control" title="Optimal control">control</a> (dynamic)</i> – This is used largely in <a href="/wiki/Computer_science" title="Computer science">computer science</a> and <a href="/wiki/Electrical_engineering" title="Electrical engineering">electrical engineering</a>. The optimal control is per state and the results change in each of them. One can use mathematical programming, as well as dynamic programming. In this scenario, simulation can generate random samples and solve complex and large-scale problems.<sup id="cite_ref-:0_4-1" class="reference"><a href="#cite_note-:0-4">&#91;4&#93;</a></sup>
+</p>
+<div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Simulation-based_optimization_methods"><span class="tocnumber">1</span> <span class="toctext">Simulation-based optimization methods</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Statistical_ranking_and_selection_methods_(R/S)"><span class="tocnumber">1.1</span> <span class="toctext">Statistical ranking and selection methods (R/S)</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Response_surface_methodology_(RSM)"><span class="tocnumber">1.2</span> <span class="toctext">Response surface methodology (RSM)</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Heuristic_methods"><span class="tocnumber">1.3</span> <span class="toctext">Heuristic methods</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Stochastic_approximation"><span class="tocnumber">1.4</span> <span class="toctext">Stochastic approximation</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Derivative-free_optimization_methods"><span class="tocnumber">1.5</span> <span class="toctext">Derivative-free optimization methods</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Dynamic_programming_and_neuro-dynamic_programming"><span class="tocnumber">1.6</span> <span class="toctext">Dynamic programming and neuro-dynamic programming</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Dynamic_programming"><span class="tocnumber">1.6.1</span> <span class="toctext">Dynamic programming</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Neuro-dynamic_programming"><span class="tocnumber">1.6.2</span> <span class="toctext">Neuro-dynamic programming</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Limitations"><span class="tocnumber">2</span> <span class="toctext">Limitations</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#References"><span class="tocnumber">3</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Simulation-based_optimization_methods">Simulation-based optimization methods</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simulation-based_optimization&amp;action=edit&amp;section=1" title="Edit section: Simulation-based optimization methods">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The main approaches in simulation optimization are discussed below. 
+<sup id="cite_ref-Fu_5-0" class="reference"><a href="#cite_note-Fu-5">&#91;5&#93;</a></sup>
+</p>
+<h3><span id="Statistical_ranking_and_selection_methods_.28R.2FS.29"></span><span class="mw-headline" id="Statistical_ranking_and_selection_methods_(R/S)">Statistical ranking and selection methods (R/S)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simulation-based_optimization&amp;action=edit&amp;section=2" title="Edit section: Statistical ranking and selection methods (R/S)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Ranking and selection methods are designed for problems where the alternatives are fixed and known, and simulation is used to estimate the system performance. 
+In the simulation optimization setting, applicable methods include indifference zone approaches, optimal computing budget allocation, and knowledge gradient algorithms.
+</p>
+<h3><span id="Response_surface_methodology_.28RSM.29"></span><span class="mw-headline" id="Response_surface_methodology_(RSM)">Response surface methodology (RSM)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simulation-based_optimization&amp;action=edit&amp;section=3" title="Edit section: Response surface methodology (RSM)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="/wiki/Response_surface_methodology" title="Response surface methodology">response surface methodology</a>, the objective is to find the relationship between the input variables and the response variables. The process starts from trying to fit a linear regression model. If the P-value turns out to be low, then a higher degree polynomial regression, which is usually quadratic, will be implemented. The process of finding a good relationship between input and response variables will be done for each simulation test. In simulation optimization, response surface method can be used to find the best input variables that produce desired outcomes in terms of response variables.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Heuristic_methods">Heuristic methods</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simulation-based_optimization&amp;action=edit&amp;section=4" title="Edit section: Heuristic methods">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/Heuristic_(computer_science)" title="Heuristic (computer science)">Heuristic methods</a> change accuracy by speed. Their goal is to find a good solution faster than the traditional methods, when they are too slow or fail in solving the problem. Usually they find local optimal instead of the optimal value; however, the values are considered close enough of the final solution. Examples of this kind of method is <a href="/wiki/Tabu_search" title="Tabu search">tabu search</a> or <a href="/wiki/Genetic_algorithm" title="Genetic algorithm">Genetic algorithm</a>.<sup id="cite_ref-:0_4-2" class="reference"><a href="#cite_note-:0-4">&#91;4&#93;</a></sup>
+</p><p>Metamodels enable researchers to obtain reliable approximate model outputs without running expensive and time-consuming computer simulations. Therefore, the process of model optimization can take less computation time and cost. <sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Stochastic_approximation">Stochastic approximation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simulation-based_optimization&amp;action=edit&amp;section=5" title="Edit section: Stochastic approximation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/Stochastic_approximation" title="Stochastic approximation">Stochastic approximation</a> is used when the function cannot be computed directly, only estimated via noisy observations. In this scenarios, this method (or family of methods) looks for the extrema of these function. The objective function would be:<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\underset {{\text{x}}\in \theta }{\min }}f{\bigl (}{\text{x}}{\bigr )}={\underset {{\text{x}}\in \theta }{\min }}\mathrm {E} [F{\bigl (}{\text{x,y}})]}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <munder>
+            <mo form="prefix">min</mo>
+            <mrow>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mtext>x</mtext>
+              </mrow>
+              <mo>&#x2208;<!-- ∈ --></mo>
+              <mi>&#x03B8;<!-- θ --></mi>
+            </mrow>
+          </munder>
+        </mrow>
+        <mi>f</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-OPEN">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>x</mtext>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-CLOSE">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <munder>
+            <mo form="prefix">min</mo>
+            <mrow>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mtext>x</mtext>
+              </mrow>
+              <mo>&#x2208;<!-- ∈ --></mo>
+              <mi>&#x03B8;<!-- θ --></mi>
+            </mrow>
+          </munder>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="normal">E</mi>
+        </mrow>
+        <mo stretchy="false">[</mo>
+        <mi>F</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-OPEN">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>x,y</mtext>
+        </mrow>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\underset {{\text{x}}\in \theta }{\min }}f{\bigl (}{\text{x}}{\bigr )}={\underset {{\text{x}}\in \theta }{\min }}\mathrm {E} [F{\bigl (}{\text{x,y}})]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/04377c9d3671d9fd84e77dccf51a61d6e750124a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.171ex; width:25.174ex; height:4.343ex;" alt="{\displaystyle {\underset {{\text{x}}\in \theta }{\min }}f{\bigl (}{\text{x}}{\bigr )}={\underset {{\text{x}}\in \theta }{\min }}\mathrm {E} [F{\bigl (}{\text{x,y}})]}"/></span></dd></dl>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle y}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b8a6208ec717213d4317e666f1ae872e00620a0d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.155ex; height:2.009ex;" alt="y"/></span>  is a random variable that represents the noise.</dd></dl>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="x"/></span> is the parameter that minimizes  <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f{\bigl (}{\text{x}}{\bigr )}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-OPEN">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>x</mtext>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-CLOSE">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f{\bigl (}{\text{x}}{\bigr )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f816c678d8052e2b49b17131f43000468baf434b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:4.636ex; height:3.176ex;" alt="{\displaystyle f{\bigl (}{\text{x}}{\bigr )}}"/></span>.</dd></dl>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \theta }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03B8;<!-- θ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \theta }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6e5ab2664b422d53eb0c7df3b87e1360d75ad9af" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.09ex; height:2.176ex;" alt="\theta "/></span>  is the domain of the parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="x"/></span>.</dd></dl>
+<h3><span class="mw-headline" id="Derivative-free_optimization_methods">Derivative-free optimization methods</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simulation-based_optimization&amp;action=edit&amp;section=6" title="Edit section: Derivative-free optimization methods">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/Derivative-free_optimization" title="Derivative-free optimization">Derivative-free optimization</a> is a subject of mathematical optimization. This method is applied to a certain optimization problem when its derivatives are unavailable or unreliable. Derivative-free methods establish a model based on sample function values or directly draw a sample set of function values without exploiting a detailed model. Since it needs no derivatives, it cannot be compared to derivative-based methods.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p><p>For unconstrained optimization problems, it has the form:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\underset {{\text{x}}\in \mathbb {R} ^{n}}{\min }}f{\bigl (}{\text{x}}{\bigr )}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <munder>
+            <mo form="prefix">min</mo>
+            <mrow>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mtext>x</mtext>
+              </mrow>
+              <mo>&#x2208;<!-- ∈ --></mo>
+              <msup>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi mathvariant="double-struck">R</mi>
+                </mrow>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi>n</mi>
+                </mrow>
+              </msup>
+            </mrow>
+          </munder>
+        </mrow>
+        <mi>f</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-OPEN">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>x</mtext>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-CLOSE">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\underset {{\text{x}}\in \mathbb {R} ^{n}}{\min }}f{\bigl (}{\text{x}}{\bigr )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d0d2d4b9e8f3fb0e5a9d61d4401f070fe2069bf8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.171ex; width:8.752ex; height:4.343ex;" alt="{\displaystyle {\underset {{\text{x}}\in \mathbb {R} ^{n}}{\min }}f{\bigl (}{\text{x}}{\bigr )}}"/></span></dd></dl>
+<p>The limitations of derivative-free optimization:
+</p><p>1. It is usually cannot handle optimization problems with a few tens of variables; the results via this method are usually not so accurate.
+</p><p>2. When confronted with minimizing non-convex functions, it will show its limitation.
+</p><p>3. Derivative-free optimization methods are simple and easy; however, they are not so good in theory and in practice.
+</p>
+<h3><span class="mw-headline" id="Dynamic_programming_and_neuro-dynamic_programming">Dynamic programming and neuro-dynamic programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simulation-based_optimization&amp;action=edit&amp;section=7" title="Edit section: Dynamic programming and neuro-dynamic programming">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Dynamic_programming">Dynamic programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simulation-based_optimization&amp;action=edit&amp;section=8" title="Edit section: Dynamic programming">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/Dynamic_programming" title="Dynamic programming">Dynamic programming</a> deals with situations where decisions are made in stages. The key to this kind of problems is to trade off the present and future costs.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+</p><p>One dynamic basic model has two features:
+</p><p>1) It has a discrete time dynamic system.
+</p><p>2) The cost function is additive over time.
+</p><p>For discrete features, dynamic programming has the form:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x_{k+1}=f_{k}(x_{k},u_{k},w_{k}),k=0,1,...,N-1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msub>
+          <mi>f</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>u</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>=</mo>
+        <mn>0</mn>
+        <mo>,</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mo>.</mo>
+        <mo>.</mo>
+        <mo>.</mo>
+        <mo>,</mo>
+        <mi>N</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x_{k+1}=f_{k}(x_{k},u_{k},w_{k}),k=0,1,...,N-1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/378685c62aaaebe77efa1377f36905e9937db4af" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:41.251ex; height:2.843ex;" alt="{\displaystyle x_{k+1}=f_{k}(x_{k},u_{k},w_{k}),k=0,1,...,N-1}"/></span></dd></dl>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle k}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>k</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle k}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3c9a2c7b599b37105512c5d570edc034056dd40" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.211ex; height:2.176ex;" alt="k"/></span> represents the index of discrete time.</dd></dl>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x_{k}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x_{k}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6d2b88c64c76a03611549fb9b4cf4ed060b56002" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.418ex; height:2.009ex;" alt="x_{k}"/></span> is the state of the time k, it contains the past information and prepare it for the future optimization.</dd></dl>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle u_{k}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>u</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle u_{k}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9837644700489d04d977da272524cd5fda36f3d7" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.418ex; height:2.009ex;" alt="u_{k}"/></span> is the control variable.</dd></dl>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle w_{k}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle w_{k}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ac808de3e1f01ed40c69d4a350035b19ab28445f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.753ex; height:2.009ex;" alt="w_k"/></span> is the random parameter.</dd></dl>
+<p>For the cost function, it has the form:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle g_{N}(X_{N})+\sum _{k=0}^{N-1}gk(x_{k},u_{k},W_{k})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>N</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>N</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>N</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </munderover>
+        <mi>g</mi>
+        <mi>k</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>u</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>W</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g_{N}(X_{N})+\sum _{k=0}^{N-1}gk(x_{k},u_{k},W_{k})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/77da98039d4d46afd1bb61ee82cf58ee75613503" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:29.336ex; height:7.509ex;" alt="{\displaystyle g_{N}(X_{N})+\sum _{k=0}^{N-1}gk(x_{k},u_{k},W_{k})}"/></span></dd></dl>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle g_{N}(X_{N})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>N</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>N</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g_{N}(X_{N})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1bd7b37c957c777d856169e863ef24c7c0ee0e88" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:8.226ex; height:2.843ex;" alt="{\displaystyle g_{N}(X_{N})}"/></span> is the cost at the end of the process.
+</p><p>As the cost cannot be optimized meaningfully, it can be used the expect value:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle E\{g_{N}(X_{N})+\sum _{k=0}^{N-1}g_{k}(x_{k},u_{k},W_{k})\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>E</mi>
+        <mo fence="false" stretchy="false">{</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>N</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>N</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>N</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </munderover>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>u</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>W</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle E\{g_{N}(X_{N})+\sum _{k=0}^{N-1}g_{k}(x_{k},u_{k},W_{k})\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a14fad9c4ebc8948b853c7ad1954da3f518a832e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:33.307ex; height:7.509ex;" alt="{\displaystyle E\{g_{N}(X_{N})+\sum _{k=0}^{N-1}g_{k}(x_{k},u_{k},W_{k})\}}"/></span></dd></dl>
+<h4><span class="mw-headline" id="Neuro-dynamic_programming">Neuro-dynamic programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simulation-based_optimization&amp;action=edit&amp;section=9" title="Edit section: Neuro-dynamic programming">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Neuro-dynamic programming is the same as dynamic programming except that the former has the concept of approximation architectures. It combines <a href="/wiki/Artificial_intelligence" title="Artificial intelligence">artificial intelligence</a>, simulation-base algorithms, and functional approach techniques. “Neuro” in this term origins from artificial intelligence community. It means learning how to make improved decisions for the future via built-in mechanism based on the current behavior. The most important part of neuro-dynamic programming is to build a trained neuro network for the optimal problem.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Limitations">Limitations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simulation-based_optimization&amp;action=edit&amp;section=10" title="Edit section: Limitations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Simulation based optimization has some limitations, such as the difficulty of creating a model that imitates the dynamic behavior of a system in a way that is considered good enough for its representation. Another problem is complexity in the determining uncontrollable parameters of both real-world system and simulation. Moreover, only a statistical estimation of real values can be obtained. It is not easy to determine the objective function, since it is a result of measurements, which can be harmful for the solutions.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup><sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simulation-based_optimization&amp;action=edit&amp;section=11" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Nguyen, Anh-Tuan, Sigrid Reiter, and Philippe Rigo. "<a rel="nofollow" class="external text" href="https://orbi.uliege.be/bitstream/2268/155988/1/Nguyen%20AT.pdf">A review on simulation-based optimization methods applied to building performance analysis</a>."<i>Applied Energy</i> 113 (2014): 1043–1058.</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">Carson, Yolanda, and Anu Maria. "<a rel="nofollow" class="external text" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.24.9192&amp;rep=rep1&amp;type=pdf">Simulation optimization: methods and applications</a>." <i>Proceedings of the 29th conference on Winter simulation</i>. IEEE Computer Society, 1997.</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">Jalali, Hamed, and Inneke Van Nieuwenhuyse. "<a rel="nofollow" class="external text" href="https://core.ac.uk/download/pdf/34623919.pdf">Simulation optimization in inventory replenishment: a classification</a>." IIE Transactions 47.11 (2015): 1217-1235.</span>
+</li>
+<li id="cite_note-:0-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-:0_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:0_4-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-:0_4-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text">Abhijit Gosavi, <a rel="nofollow" class="external text" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.462.5587&amp;rep=rep1&amp;type=pdf">Simulation‐Based Optimization: Parametric Optimization Techniques and Reinforcement Learning</a>, Springer, 2nd Edition (2015)</span>
+</li>
+<li id="cite_note-Fu-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-Fu_5-0">^</a></b></span> <span class="reference-text"><cite class="citation book">Fu, Michael, editor (2015). <a rel="nofollow" class="external text" href="https://www.springer.com/us/book/9781493913831"><i>Handbook of Simulation Optimization</i></a>. Springer.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Handbook+of+Simulation+Optimization&amp;rft.pub=Springer&amp;rft.date=2015&amp;rft.aulast=Fu&amp;rft.aufirst=Michael%2C+editor&amp;rft_id=https%3A%2F%2Fwww.springer.com%2Fus%2Fbook%2F9781493913831&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimulation-based+optimization" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: Extra text: authors list (<a href="/wiki/Category:CS1_maint:_Extra_text:_authors_list" title="Category:CS1 maint: Extra text: authors list">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r886058088">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">Rahimi Mazrae Shahi, M., Fallah Mehdipour, E. and Amiri, M. (2016), <a rel="nofollow" class="external text" href="https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.12150">Optimization using simulation and response surface methodology with an application on subway train scheduling</a>. Intl. Trans. in Op. Res., 23: 797–811. doi:10.1111/itor.12150</span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation journal">Yousefi, Milad; Yousefi, Moslem; Ferreira, Ricardo Poley Martins; Kim, Joong Hoon; Fogliatto, Flavio S. (2018). "Chaotic genetic algorithm and Adaboost ensemble metamodeling approach for optimum resource planning in emergency departments". <i>Artificial Intelligence in Medicine</i>. <b>84</b>: 23–33. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.1016%2Fj.artmed.2017.10.002">10.1016/j.artmed.2017.10.002</a>. <a href="/wiki/PubMed_Identifier" class="mw-redirect" title="PubMed Identifier">PMID</a>&#160;<a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pubmed/29054572">29054572</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Artificial+Intelligence+in+Medicine&amp;rft.atitle=Chaotic+genetic+algorithm+and+Adaboost+ensemble+metamodeling+approach+for+optimum+resource+planning+in+emergency+departments&amp;rft.volume=84&amp;rft.pages=23-33&amp;rft.date=2018&amp;rft_id=info%3Adoi%2F10.1016%2Fj.artmed.2017.10.002&amp;rft_id=info%3Apmid%2F29054572&amp;rft.aulast=Yousefi&amp;rft.aufirst=Milad&amp;rft.au=Yousefi%2C+Moslem&amp;rft.au=Ferreira%2C+Ricardo+Poley+Martins&amp;rft.au=Kim%2C+Joong+Hoon&amp;rft.au=Fogliatto%2C+Flavio+S.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASimulation-based+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">Powell, W. (2011). <i>Approximate Dynamic Programming Solving the Curses of Dimensionality</i> (2nd ed., Wiley Series in Probability and Statistics). Hoboken: Wiley.</span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">Conn, A. R.; <a href="/wiki/Katya_Scheinberg" title="Katya Scheinberg">Scheinberg, K.</a>; Vicente, L. N. (2009). <a rel="nofollow" class="external text" href="http://www.mat.uc.pt/~lnv/idfo/"><i>Introduction to Derivative-Free Optimization</i></a>. MPS-SIAM Book Series on Optimization. Philadelphia: SIAM. Retrieved 2014-01-18.</span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text">Cooper, Leon; Cooper, Mary W. Introduction to dynamic programming. New York: Pergamon Press, 1981</span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text">Van Roy, B., Bertsekas, D., Lee, Y., &amp; <a href="/wiki/John_Tsitsiklis" title="John Tsitsiklis">Tsitsiklis, J.</a> (1997). <a rel="nofollow" class="external text" href="https://web.stanford.edu/~bvr/pubs/retail.pdf">Neuro-dynamic programming approach to retailer inventory management</a>. <i>Proceedings of the IEEE Conference on Decision and Control,</i> <i>4</i>, 4052-4057.</span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text">Prasetio, Y. (2005). <i><a rel="nofollow" class="external text" href="https://elibrary.ru/item.asp?id=9387151">Simulation-based optimization for complex stochastic systems</a></i>. University of Washington.</span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text">Deng, G., &amp; Ferris, Michael. (2007). <i>Simulation-based Optimization,</i> ProQuest Dissertations and Theses</span>
+</li>
+</ol></div></div>
+
+<!-- 
+NewPP limit report
+Parsed by mw1272
+Cached time: 20190304022024
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.192 seconds
+Real time usage: 0.307 seconds
+Preprocessor visited node count: 403/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 4371/2097152 bytes
+Template argument size: 93/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 1/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 12419/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.084/10.000 seconds
+Lua memory usage: 1.73 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  156.657      1 Template:Reflist
+100.00%  156.657      1 -total
+ 58.54%   91.702      1 Template:Cite_book
+ 24.69%   38.683      1 Template:Cite_journal
+  1.84%    2.886      1 Template:Main_other
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:49648894-0!canonical!math=5 and timestamp 20190304022023 and revision id 883533982
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Simulation-based_optimization&amp;oldid=883533982">https://en.wikipedia.org/w/index.php?title=Simulation-based_optimization&amp;oldid=883533982</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Mathematical_optimization" title="Category:Mathematical optimization">Mathematical optimization</a></li><li><a href="/wiki/Category:Simulation" title="Category:Simulation">Simulation</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_Extra_text:_authors_list" title="Category:CS1 maint: Extra text: authors list">CS1 maint: Extra text: authors list</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Simulation-based+optimization" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Simulation-based+optimization" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="/wiki/Simulation-based_optimization" title="View the content page [c]" accesskey="c">Article</a></span></li><li id="ca-talk"><span><a href="/wiki/Talk:Simulation-based_optimization" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<ul class="menu">
+													</ul>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="/wiki/Simulation-based_optimization">Read</a></span></li><li id="ca-edit" class="collapsible"><span><a href="/w/index.php?title=Simulation-based_optimization&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></span></li><li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Simulation-based_optimization&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<ul class="menu">
+													</ul>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-interaction" aria-labelledby="p-interaction-label">
+			<h3 id="p-interaction-label">Interaction</h3>
+			<div class="body">
+								<ul>
+					<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Simulation-based_optimization" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Simulation-based_optimization" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Simulation-based_optimization&amp;oldid=883533982" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Simulation-based_optimization&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q25304881" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Simulation-based_optimization&amp;id=883533982" title="Information on how to cite this page">Cite this page</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+			<h3 id="p-coll-print_export-label">Print/export</h3>
+			<div class="body">
+								<ul>
+					<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Simulation-based+optimization">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Simulation-based+optimization&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Simulation-based_optimization&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label">
+			<h3 id="p-lang-label">Languages</h3>
+			<div class="body">
+								<ul>
+									</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-add wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q25304881#sitelinks-wikipedia" title="Add interlanguage links" class="wbc-editpage">Add links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last edited on 15 February 2019, at 23:51<span class="anonymous-show">&#160;(UTC)</span>.</li>
+								<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+								<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+								<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+								<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+								<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+								<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Simulation-based_optimization&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>					</li>
+										<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.192","walltime":"0.307","ppvisitednodes":{"value":403,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":4371,"limit":2097152},"templateargumentsize":{"value":93,"limit":2097152},"expansiondepth":{"value":7,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":12419,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  156.657      1 Template:Reflist","100.00%  156.657      1 -total"," 58.54%   91.702      1 Template:Cite_book"," 24.69%   38.683      1 Template:Cite_journal","  1.84%    2.886      1 Template:Main_other"]},"scribunto":{"limitreport-timeusage":{"value":"0.084","limit":"10.000"},"limitreport-memusage":{"value":1810978,"limit":52428800}},"cachereport":{"origin":"mw1272","timestamp":"20190304022024","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Simulation-based optimization","url":"https:\/\/en.wikipedia.org\/wiki\/Simulation-based_optimization","sameAs":"http:\/\/www.wikidata.org\/entity\/Q25304881","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q25304881","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2016-03-05T13:16:59Z","dateModified":"2019-02-15T23:51:02Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/3\/3b\/Slide1_1.jpg"}</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":94,"wgHostname":"mw1265"});});</script>
+	</body>
+</html>

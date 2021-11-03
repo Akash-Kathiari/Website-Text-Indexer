@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Linear classifier - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Linear_classifier","wgTitle":"Linear classifier","wgCurRevisionId":875790402,"wgRevisionId":875790402,"wgArticleId":98974,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from October 2017","Classification algorithms","Statistical classification"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Linear_classifier","wgRelevantArticleId":98974,"wgRequestId":"XHx8SwpAADkAAE4b@4kAAAAG","wgCSPNonce":false,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikiEditorEnabledModules":[],"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsReferencePreviews":false,"wgPopupsShouldSendModuleToUser":true,"wgPopupsConflictsWithNavPopupGadget":false,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en","usePageImages":true,"usePageDescriptions":true},"wgMFIsPageContentModelEditable":true,"wgMFEnableFontChanger":true,"wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgWMESchemaEditAttemptStepOversample":false,"wgPoweredByHHVM":true,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgWikibaseItemId":"Q2679259","wgScoreNoteLanguages":{"arabic":"العربية","catalan":"català","deutsch":"Deutsch","english":"English","espanol":"español","italiano":"italiano","nederlands":"Nederlands","norsk":"norsk","portugues":"português","suomi":"suomi","svenska":"svenska","vlaams":"West-Vlams"},"wgScoreDefaultNoteLanguage":"nederlands","wgCentralAuthMobileDomain":false,"wgCodeMirrorEnabled":true,"wgVisualEditorToolbarScrollOffset":0,"wgVisualEditorUnsupportedEditParams":["undo","undoafter","veswitched"],"wgEditSubmitButtonLabelPublish":true,"oresWikiId":"enwiki","oresBaseUrl":"http://ores.discovery.wmnet:8081/","oresApiVersion":3});mw.loader.state({"ext.gadget.charinsert-styles":"ready","ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.toc.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","ext.3d.styles":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.tokens@0tffind",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});RLPAGEMODULES=["ext.cite.ux-enhancements","ext.math.scripts","site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"];mw.loader.load(RLPAGEMODULES);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.3d.styles%7Cext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cmediawiki.toc.styles%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.charinsert-styles&amp;only=styles&amp;skin=vector"/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.33.0-wmf.19"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Linear_classifier"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Linear_classifier&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Linear_classifier&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Linear_classifier"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Linear_classifier rootpage-Linear_classifier skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div><div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en">Linear classifier</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>				<div id="contentSub"></div>
+				<div id="jump-to-nav"></div>				<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+				<a class="mw-jump-link" href="#p-search">Jump to search</a>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>In the field of <a href="/wiki/Machine_learning" title="Machine learning">machine learning</a>, the goal of <a href="/wiki/Statistical_classification" title="Statistical classification">statistical classification</a> is to use an object's characteristics to identify which class (or group) it belongs to.  A <b>linear classifier</b> achieves this by making a classification decision based on the value of a <a href="/wiki/Linear_combination" title="Linear combination">linear combination</a> of the characteristics.  An object's characteristics are also known as <a href="/wiki/Features_(pattern_recognition)" class="mw-redirect" title="Features (pattern recognition)">feature values</a> and are typically presented to the machine in a vector called a <a href="/wiki/Feature_vector" class="mw-redirect" title="Feature vector">feature vector</a>. Such classifiers work well for practical problems such as <a href="/wiki/Document_classification" title="Document classification">document classification</a>, and more generally for problems with many variables (<a href="/wiki/Feature_vector" class="mw-redirect" title="Feature vector">features</a>), reaching accuracy levels comparable to non-linear classifiers while taking less time to train and use.<sup id="cite_ref-ieee_1-0" class="reference"><a href="#cite_note-ieee-1">&#91;1&#93;</a></sup>
+</p>
+<div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Definition"><span class="tocnumber">1</span> <span class="toctext">Definition</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Generative_models_vs._discriminative_models"><span class="tocnumber">2</span> <span class="toctext">Generative models vs. discriminative models</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Discriminative_training"><span class="tocnumber">2.1</span> <span class="toctext">Discriminative training</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Further_reading"><span class="tocnumber">5</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Definition">Definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_classifier&amp;action=edit&amp;section=1" title="Edit section: Definition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Svm_separating_hyperplanes.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Svm_separating_hyperplanes.png/220px-Svm_separating_hyperplanes.png" decoding="async" width="220" height="210" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Svm_separating_hyperplanes.png/330px-Svm_separating_hyperplanes.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/20/Svm_separating_hyperplanes.png/440px-Svm_separating_hyperplanes.png 2x" data-file-width="1483" data-file-height="1416" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Svm_separating_hyperplanes.png" class="internal" title="Enlarge"></a></div>In this case, the solid and empty dots can be correctly classified by any number of linear classifiers. H1 (blue) classifies them correctly, as does H2 (red). H2 could be considered "better" in the sense that it is also furthest from both groups. H3 (green) fails to correctly classify the dots.</div></div></div>
+<p>If the input feature vector to the classifier is a <a href="/wiki/Real_number" title="Real number">real</a> vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\vec {x}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>x</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\vec {x}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/db2dc6ced9cc3bc7e8b9f2707cbec033f6d3759c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:2.343ex;" alt="{\vec {x}}"/></span>, then the output score is
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle y=f({\vec {w}}\cdot {\vec {x}})=f\left(\sum _{j}w_{j}x_{j}\right),}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>y</mi>
+        <mo>=</mo>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>w</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>x</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>f</mi>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <munder>
+              <mo>&#x2211;<!-- ∑ --></mo>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>j</mi>
+              </mrow>
+            </munder>
+            <msub>
+              <mi>w</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>j</mi>
+              </mrow>
+            </msub>
+            <msub>
+              <mi>x</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>j</mi>
+              </mrow>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y=f({\vec {w}}\cdot {\vec {x}})=f\left(\sum _{j}w_{j}x_{j}\right),}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4b3c233b748fa77e9132685b0574a69e92aa1899" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.338ex; width:30.049ex; height:7.676ex;" alt="y=f({\vec {w}}\cdot {\vec {x}})=f\left(\sum _{j}w_{j}x_{j}\right),"/></span></dd></dl>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\vec {w}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>w</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\vec {w}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8b6c48cdaecf8d81481ea21b1d0c046bf34b68ec" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.664ex; height:2.343ex;" alt="{\vec {w}}"/></span> is a real vector of weights and <i>f</i> is a function that converts the <a href="/wiki/Dot_product" title="Dot product">dot product</a> of the two vectors into the desired output. (In other words, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\vec {w}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>w</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\vec {w}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8b6c48cdaecf8d81481ea21b1d0c046bf34b68ec" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.664ex; height:2.343ex;" alt="{\vec {w}}"/></span> is a <a href="/wiki/One-form" title="One-form">one-form</a> or <a href="/wiki/Linear_functional" class="mw-redirect" title="Linear functional">linear functional</a> mapping <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\vec {x}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>x</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\vec {x}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/db2dc6ced9cc3bc7e8b9f2707cbec033f6d3759c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:2.343ex;" alt="{\vec {x}}"/></span> onto <b>R</b>.) The weight vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\vec {w}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>w</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\vec {w}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8b6c48cdaecf8d81481ea21b1d0c046bf34b68ec" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.664ex; height:2.343ex;" alt="{\vec {w}}"/></span> is learned from a set of labeled training samples. Often <i>f</i> is a <b>threshold function</b>, which maps all values of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\vec {w}}\cdot {\vec {x}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>w</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>x</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\vec {w}}\cdot {\vec {x}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b0926e99d00d2252b6772c09f5bc3d4e307511ff" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:4.673ex; height:2.343ex;" alt="{\displaystyle {\vec {w}}\cdot {\vec {x}}}"/></span> above a certain threshold to the first class and all other values to the second class; e.g., 
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f(\mathbf {x} )={\begin{cases}1&amp;{\text{if }}\ \mathbf {w} \cdot \mathbf {x} &gt;T,\\0&amp;{\text{otherwise}}\end{cases}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">x</mi>
+        </mrow>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow>
+            <mo>{</mo>
+            <mtable columnalign="left left" rowspacing=".2em" columnspacing="1em" displaystyle="false">
+              <mtr>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>if&#xA0;</mtext>
+                  </mrow>
+                  <mtext>&#xA0;</mtext>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi mathvariant="bold">w</mi>
+                  </mrow>
+                  <mo>&#x22C5;<!-- ⋅ --></mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi mathvariant="bold">x</mi>
+                  </mrow>
+                  <mo>&gt;</mo>
+                  <mi>T</mi>
+                  <mo>,</mo>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>otherwise</mtext>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo fence="true" stretchy="true" symmetric="true"></mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(\mathbf {x} )={\begin{cases}1&amp;{\text{if }}\ \mathbf {w} \cdot \mathbf {x} &gt;T,\\0&amp;{\text{otherwise}}\end{cases}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/842ef8a3c82b00c9074bfe010a529c44547100da" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:26.5ex; height:6.176ex;" alt="{\displaystyle f(\mathbf {x} )={\begin{cases}1&amp;{\text{if }}\ \mathbf {w} \cdot \mathbf {x} &gt;T,\\0&amp;{\text{otherwise}}\end{cases}}}"/></span></dd></dl>
+<p>A more complex <i>f</i> might give the probability that an item belongs to a certain class.
+</p><p>For a two-class classification problem, one can visualize the operation of a linear classifier as splitting a <a href="/wiki/High-dimensional_space" class="mw-redirect" title="High-dimensional space">high-dimensional</a> input space with a <a href="/wiki/Hyperplane" title="Hyperplane">hyperplane</a>: all points on one side of the hyperplane are classified as "yes", while the others are classified as "no".
+</p><p>A linear classifier is often used in situations where the speed of classification is an issue, since it is often the fastest classifier, especially when <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\vec {x}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>x</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\vec {x}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/db2dc6ced9cc3bc7e8b9f2707cbec033f6d3759c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:2.343ex;" alt="{\vec {x}}"/></span> is sparse. Also, linear classifiers often work very well when the number of dimensions in <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\vec {x}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>x</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\vec {x}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/db2dc6ced9cc3bc7e8b9f2707cbec033f6d3759c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:2.343ex;" alt="{\vec {x}}"/></span> is large, as in <a href="/wiki/Document_classification" title="Document classification">document classification</a>, where each element in <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\vec {x}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>x</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\vec {x}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/db2dc6ced9cc3bc7e8b9f2707cbec033f6d3759c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:2.343ex;" alt="{\vec {x}}"/></span> is typically the number of occurrences of a word in a document (see <a href="/wiki/Document-term_matrix" title="Document-term matrix">document-term matrix</a>). In such cases, the classifier should be well-<a href="/wiki/Regularization_(machine_learning)" class="mw-redirect" title="Regularization (machine learning)">regularized</a>.
+</p>
+<h2><span class="mw-headline" id="Generative_models_vs._discriminative_models">Generative models vs. discriminative models</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_classifier&amp;action=edit&amp;section=2" title="Edit section: Generative models vs. discriminative models">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There are two broad classes of methods for determining the parameters of a linear classifier <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\vec {w}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>w</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\vec {w}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8b6c48cdaecf8d81481ea21b1d0c046bf34b68ec" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.664ex; height:2.343ex;" alt="{\vec {w}}"/></span>. They can be <a href="/wiki/Generative_model" title="Generative model">generative</a> and <a href="/wiki/Discriminative_model" title="Discriminative model">discriminative</a> models.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup><sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> Methods of the first class model <a href="/wiki/Conditional_probability_distribution" title="Conditional probability distribution">conditional density functions</a> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle P({\vec {x}}|{\rm {class}})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>P</mi>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>x</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">c</mi>
+            <mi mathvariant="normal">l</mi>
+            <mi mathvariant="normal">a</mi>
+            <mi mathvariant="normal">s</mi>
+            <mi mathvariant="normal">s</mi>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle P({\vec {x}}|{\rm {class}})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b05d0e0f8fcf82e7f3c34e5cc4a839f7614453fa" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.205ex; height:2.843ex;" alt="P({\vec {x}}|{\rm {class}})"/></span>. Examples of such algorithms include:
+</p>
+<ul><li><a href="/wiki/Linear_discriminant_analysis" title="Linear discriminant analysis">Linear Discriminant Analysis (or Fisher's linear discriminant)</a> (LDA)—assumes <a href="/wiki/Normal_distribution" title="Normal distribution">Gaussian</a> conditional density models</li>
+<li><a href="/wiki/Naive_Bayes_classifier" title="Naive Bayes classifier">Naive Bayes classifier</a> with multinomial or multivariate Bernoulli event models.</li></ul>
+<p>The second set of methods includes <a href="/wiki/Discriminative_model" title="Discriminative model">discriminative models</a>, which attempt to maximize the quality of the output on a <a href="/wiki/Training_set" class="mw-redirect" title="Training set">training set</a>. Additional terms in the training cost function can easily perform <a href="/wiki/Regularization_(machine_learning)" class="mw-redirect" title="Regularization (machine learning)">regularization</a> of the final model. Examples of discriminative training of linear classifiers include:
+</p>
+<ul><li><a href="/wiki/Logistic_regression" title="Logistic regression">Logistic regression</a>—maximum likelihood estimation of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\vec {w}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>w</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\vec {w}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8b6c48cdaecf8d81481ea21b1d0c046bf34b68ec" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.664ex; height:2.343ex;" alt="{\vec {w}}"/></span> assuming that the observed training set was generated by a binomial model that depends on the output of the classifier.</li>
+<li><a href="/wiki/Perceptron" title="Perceptron">Perceptron</a>—an algorithm that attempts to fix all errors encountered in the training set</li>
+<li><a href="/wiki/Support_vector_machine" class="mw-redirect" title="Support vector machine">Support vector machine</a>—an algorithm that maximizes the <a href="/wiki/Margin_(machine_learning)" title="Margin (machine learning)">margin</a> between the decision hyperplane and the examples in the training set.</li></ul>
+<p><b>Note:</b>   Despite its name, LDA does not belong to the class of discriminative models in this taxonomy. However, its name makes sense when we compare LDA to the other main linear <a href="/wiki/Dimensionality_reduction" title="Dimensionality reduction">dimensionality reduction</a> algorithm: <a href="/wiki/Principal_components_analysis" class="mw-redirect" title="Principal components analysis">principal components analysis</a> (PCA). LDA is a <a href="/wiki/Supervised_learning" title="Supervised learning">supervised learning</a> algorithm that utilizes the labels of the data, while PCA is an <a href="/wiki/Unsupervised_learning" title="Unsupervised learning">unsupervised learning</a> algorithm that ignores the labels. To summarize, the name is a historical artifact.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>117</span></sup>
+</p><p>Discriminative training often yields higher accuracy than modeling the conditional density functions<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (October 2017)">citation needed</span></a></i>&#93;</sup>. However, handling missing data is often easier with conditional density models<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (October 2017)">citation needed</span></a></i>&#93;</sup>.
+</p><p>All of the linear classifier algorithms listed above can be converted into non-linear algorithms operating on a different input space <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \varphi ({\vec {x}})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C6;<!-- φ --></mi>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>x</mi>
+              <mo stretchy="false">&#x2192;<!-- → --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \varphi ({\vec {x}})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d303b13454b99629a5d162777b841cab5a8b3a9c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.659ex; height:2.843ex;" alt="\varphi ({\vec {x}})"/></span>, using the <a href="/wiki/Kernel_trick" class="mw-redirect" title="Kernel trick">kernel trick</a>.
+</p>
+<h3><span class="mw-headline" id="Discriminative_training">Discriminative training</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_classifier&amp;action=edit&amp;section=3" title="Edit section: Discriminative training">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Discriminative training of linear classifiers usually proceeds in a <a href="/wiki/Supervised_learning" title="Supervised learning">supervised</a> way, by means of an <a href="/wiki/Optimization_algorithm" class="mw-redirect" title="Optimization algorithm">optimization algorithm</a> that is given a training set with desired outputs and a <a href="/wiki/Loss_function" title="Loss function">loss function</a> that measures the discrepancy between the classifier's outputs and the desired outputs. Thus, the learning algorithm solves an optimization problem of the form<sup id="cite_ref-ieee_1-1" class="reference"><a href="#cite_note-ieee-1">&#91;1&#93;</a></sup>
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\underset {\mathbf {w} }{\arg \min }}\;R(\mathbf {w} )+C\sum _{i=1}^{N}L(y_{i},\mathbf {w} ^{\mathsf {T}}\mathbf {x} _{i})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <munder>
+            <mrow>
+              <mi>arg</mi>
+              <mo>&#x2061;<!-- ⁡ --></mo>
+              <mo movablelimits="true" form="prefix">min</mo>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi mathvariant="bold">w</mi>
+            </mrow>
+          </munder>
+        </mrow>
+        <mspace width="thickmathspace" />
+        <mi>R</mi>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">w</mi>
+        </mrow>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <mi>C</mi>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>N</mi>
+          </mrow>
+        </munderover>
+        <mi>L</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="bold">w</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi mathvariant="sans-serif">T</mi>
+            </mrow>
+          </mrow>
+        </msup>
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="bold">x</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\underset {\mathbf {w} }{\arg \min }}\;R(\mathbf {w} )+C\sum _{i=1}^{N}L(y_{i},\mathbf {w} ^{\mathsf {T}}\mathbf {x} _{i})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/51f972ea472f3ac857e571da31fc714b87a57af6" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.005ex; width:34.243ex; height:7.343ex;" alt="{\displaystyle {\underset {\mathbf {w} }{\arg \min }}\;R(\mathbf {w} )+C\sum _{i=1}^{N}L(y_{i},\mathbf {w} ^{\mathsf {T}}\mathbf {x} _{i})}"/></span></dd></dl>
+<p>where
+</p>
+<ul><li><span class="texhtml"><b>w</b></span> is a vector of classifier parameters,</li>
+<li><span class="texhtml"><i>L</i>(<i>y<sub>i</sub></i>, <b>w</b><sup>T</sup><b>x</b><sub><i>i</i></sub>)</span> is a loss function that measures the discrepancy between the classifier's prediction and the true output <span class="texhtml mvar" style="font-style:italic;">y<sub>i</sub></span> for the <span class="texhtml mvar" style="font-style:italic;">i</span>'th training example,</li>
+<li><span class="texhtml"><i>R</i>(<b>w</b>)</span> is a <a href="/wiki/Regularization_(mathematics)" title="Regularization (mathematics)">regularization</a> function that prevents the parameters from getting too large (causing <a href="/wiki/Overfitting" title="Overfitting">overfitting</a>), and</li>
+<li><span class="texhtml mvar" style="font-style:italic;">C</span> is a scalar constant (set by the user of the learning algorithm) that controls the balance between the regularization and the loss function.</li></ul>
+<p>Popular loss functions include the <a href="/wiki/Hinge_loss" title="Hinge loss">hinge loss</a> (for linear SVMs) and the <a href="/wiki/Log_loss" class="mw-redirect" title="Log loss">log loss</a> (for linear logistic regression). If the regularization function <span class="texhtml mvar" style="font-style:italic;">R</span> is <a href="/wiki/Convex_function" title="Convex function">convex</a>, then the above is a <a href="/wiki/Convex_optimization" title="Convex optimization">convex problem</a>.<sup id="cite_ref-ieee_1-2" class="reference"><a href="#cite_note-ieee-1">&#91;1&#93;</a></sup> Many algorithms exist for solving such problems; popular ones for linear classification include (<a href="/wiki/Stochastic_gradient_descent" title="Stochastic gradient descent">stochastic</a>) <a href="/wiki/Gradient_descent" title="Gradient descent">gradient descent</a>, <a href="/wiki/L-BFGS" class="mw-redirect" title="L-BFGS">L-BFGS</a>, <a href="/wiki/Coordinate_descent" title="Coordinate descent">coordinate descent</a> and <a href="/wiki/Newton_method" class="mw-redirect" title="Newton method">Newton methods</a>.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_classifier&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Backpropagation" title="Backpropagation">Backpropagation</a></li>
+<li><a href="/wiki/Linear_regression" title="Linear regression">Linear regression</a></li>
+<li><a href="/wiki/Perceptron" title="Perceptron">Perceptron</a></li>
+<li><a href="/wiki/Quadratic_classifier" title="Quadratic classifier">Quadratic classifier</a></li>
+<li><a href="/wiki/Support_vector_machines" class="mw-redirect" title="Support vector machines">Support vector machines</a></li>
+<li><a href="/wiki/Winnow_(algorithm)" title="Winnow (algorithm)">Winnow (algorithm)</a></li></ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_classifier&amp;action=edit&amp;section=5" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-ieee-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-ieee_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ieee_1-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-ieee_1-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation journal">Guo-Xun Yuan; Chia-Hua Ho; Chih-Jen Lin (2012). "Recent Advances of Large-Scale Linear Classification". <i>Proc. IEEE</i>. <b>100</b> (9).</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Proc.+IEEE&amp;rft.atitle=Recent+Advances+of+Large-Scale+Linear+Classification&amp;rft.volume=100&amp;rft.issue=9&amp;rft.date=2012&amp;rft.au=Guo-Xun+Yuan&amp;rft.au=Chia-Hua+Ho&amp;rft.au=Chih-Jen+Lin&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+classifier" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r886058088">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">T. Mitchell, <a rel="nofollow" class="external text" href="http://www.cs.cmu.edu/~tom/mlbook/NBayesLogReg.pdf">Generative and Discriminative Classifiers: Naive Bayes and Logistic Regression.</a> Draft Version, 2005</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">A. Y. Ng and M. I. Jordan. <a rel="nofollow" class="external text" href="http://www.cs.berkeley.edu/~jordan/papers/ng-jordan-nips01.ps">On Discriminative vs. Generative Classifiers: A comparison of logistic regression and Naive Bayes.</a>  in NIPS 14, 2002.</span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">R.O. Duda, P.E. Hart, D.G. Stork, "Pattern Classification", Wiley, (2001). <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-05669-3" title="Special:BookSources/0-471-05669-3">0-471-05669-3</a></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_classifier&amp;action=edit&amp;section=6" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol><li>Y. Yang, X. Liu, "A re-examination of text categorization", Proc. ACM SIGIR Conference, pp.&#160;42–49, (1999). <a rel="nofollow" class="external text" href="http://citeseer.ist.psu.edu/yang99reexamination.html">paper @ citeseer</a></li>
+<li>R. Herbrich, "Learning Kernel Classifiers: Theory and Algorithms," MIT Press, (2001). <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-262-08306-X" title="Special:BookSources/0-262-08306-X">0-262-08306-X</a></li></ol>
+
+<!-- 
+NewPP limit report
+Parsed by mw1262
+Cached time: 20190304011555
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.252 seconds
+Real time usage: 0.383 seconds
+Preprocessor visited node count: 1002/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 8231/2097152 bytes
+Template argument size: 1972/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 1/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 8843/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.106/10.000 seconds
+Lua memory usage: 2.16 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  266.083      1 -total
+ 34.60%   92.076      2 Template:Citation_needed
+ 32.33%   86.028      1 Template:Cite_journal
+ 26.22%   69.767      2 Template:Fix
+ 19.94%   53.061      2 Template:ISBN
+ 17.30%   46.045      4 Template:Category_handler
+  7.16%   19.059      2 Template:Delink
+  6.01%   15.994      2 Template:Catalog_lookup_link
+  5.66%   15.069      2 Template:Error-small
+  4.30%   11.449      2 Template:R
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:98974-0!canonical!math=5 and timestamp 20190304011555 and revision id 875790402
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Linear_classifier&amp;oldid=875790402">https://en.wikipedia.org/w/index.php?title=Linear_classifier&amp;oldid=875790402</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Classification_algorithms" title="Category:Classification algorithms">Classification algorithms</a></li><li><a href="/wiki/Category:Statistical_classification" title="Category:Statistical classification">Statistical classification</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_October_2017" title="Category:Articles with unsourced statements from October 2017">Articles with unsourced statements from October 2017</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Linear+classifier" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Linear+classifier" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="/wiki/Linear_classifier" title="View the content page [c]" accesskey="c">Article</a></span></li><li id="ca-talk"><span><a href="/wiki/Talk:Linear_classifier" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<ul class="menu">
+													</ul>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="/wiki/Linear_classifier">Read</a></span></li><li id="ca-edit" class="collapsible"><span><a href="/w/index.php?title=Linear_classifier&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></span></li><li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Linear_classifier&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<ul class="menu">
+													</ul>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-interaction" aria-labelledby="p-interaction-label">
+			<h3 id="p-interaction-label">Interaction</h3>
+			<div class="body">
+								<ul>
+					<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Linear_classifier" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Linear_classifier" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Linear_classifier&amp;oldid=875790402" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Linear_classifier&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q2679259" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Linear_classifier&amp;id=875790402" title="Information on how to cite this page">Cite this page</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+			<h3 id="p-coll-print_export-label">Print/export</h3>
+			<div class="body">
+								<ul>
+					<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Linear+classifier">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Linear+classifier&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Linear_classifier&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label">
+			<h3 id="p-lang-label">Languages</h3>
+			<div class="body">
+								<ul>
+					<li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Clasificador_lineal" title="Clasificador lineal – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Classifieur_lin%C3%A9aire" title="Classifieur linéaire – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%84%A0%ED%98%95_%EB%B6%84%EB%A5%98" title="선형 분류 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Classificatore_lineare" title="Classificatore lineare – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E7%B7%9A%E5%BD%A2%E5%88%86%E9%A1%9E%E5%99%A8" title="線形分類器 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D0%BD%D0%B5%D0%B9%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80" title="Линейный классификатор – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Linj%C3%A4r_klassificerare" title="Linjär klassificerare – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9B%D1%96%D0%BD%D1%96%D0%B9%D0%BD%D0%B8%D0%B9_%D0%BA%D0%BB%D0%B0%D1%81%D0%B8%D1%84%D1%96%D0%BA%D0%B0%D1%82%D0%BE%D1%80" title="Лінійний класифікатор – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E7%BA%BF%E6%80%A7%E5%88%86%E7%B1%BB%E5%99%A8" title="线性分类器 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li>				</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q2679259#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last edited on 29 December 2018, at 01:12<span class="anonymous-show">&#160;(UTC)</span>.</li>
+								<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+								<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+								<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+								<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+								<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+								<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Linear_classifier&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>					</li>
+										<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.252","walltime":"0.383","ppvisitednodes":{"value":1002,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":8231,"limit":2097152},"templateargumentsize":{"value":1972,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":8843,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  266.083      1 -total"," 34.60%   92.076      2 Template:Citation_needed"," 32.33%   86.028      1 Template:Cite_journal"," 26.22%   69.767      2 Template:Fix"," 19.94%   53.061      2 Template:ISBN"," 17.30%   46.045      4 Template:Category_handler","  7.16%   19.059      2 Template:Delink","  6.01%   15.994      2 Template:Catalog_lookup_link","  5.66%   15.069      2 Template:Error-small","  4.30%   11.449      2 Template:R"]},"scribunto":{"limitreport-timeusage":{"value":"0.106","limit":"10.000"},"limitreport-memusage":{"value":2268025,"limit":52428800}},"cachereport":{"origin":"mw1262","timestamp":"20190304011555","ttl":2592000,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":513,"wgHostname":"mw1262"});});</script>
+	</body>
+</html>
